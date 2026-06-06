@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Categories | Shree Prakash Genral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script type="module" src="categories.js"></script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+        .category-image {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary">Shree Prakash Genral</h1>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Electronics</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Beauty</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home &amp; Living</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sports</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Toys &amp; Games</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Fashion</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant w-64">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">favorite</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">shopping_cart</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span></button>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col gap-4 max-w-3xl">
+<h2 class="font-headline-xl text-headline-xl text-primary">Explore Our Collections</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Discover a curated selection of quality goods across every department. From cutting-edge electronics to the latest fashion trends, we provide a reliable shopping experience tailored to your lifestyle.
+                </p>
+</div>
+</section>
+<!-- Category Bento/Grid Layout -->
+<section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-gutter">
+<!-- Electronics (Large) -->
+<div class="category-card lg:col-span-6 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-[16/9]">
+<img alt="Electronics" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A high-tech electronics collection featuring modern laptops, noise-canceling headphones, and minimalist smartphones arranged on a sleek slate desk. The lighting is cool-toned and professional, emphasizing the metallic textures and premium build quality of the devices. The overall atmosphere is futuristic and organized, aligning with a reliable retail aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCWfn_iOLM-RgJL01EloukNK0IW0Wh2-mz8t2LRDxewabX_tR6u8uSE_0Rcv_sCXfOiXS4qTkK5oFGDPbZ-qxEam6i-SDPQTsDyE_vGnHg1g1FLMheiHUOg9gWidC-6-QL1djvJKyS5EzBfljfwMLVb4KWm9MSp7EPsldtKMLTeuW9owEw8zOiPiaZ4FBhe33AeqV-bxU7pjUhnqHUb7ei0BQW8TArNVd6zJaoWvjH718rVwM4TJ0YCmzaHmHf0HcRHHkpZxL5tu0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg text-white mb-2">Electronics</h3>
+<a class="font-label-md text-white flex items-center gap-2 hover:underline" href="electronics.html">
+                            Shop Now <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Beauty -->
+<div class="category-card lg:col-span-3 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-[3/4] lg:aspect-auto">
+<img alt="Beauty" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A luxurious beauty products display with glass perfume bottles, organic face serums, and soft makeup brushes on a clean marble surface. Warm morning light spills across the scene, creating soft shadows and a sense of calm elegance. The palette includes muted tones of sage and white, maintaining a professional yet welcoming shopping feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDdLvHDIXNzRZgxSP7kc72oXWi1upc822mNvA7kFjdbh70OLlwVw6Bp0zEIUKFcuWeXUclULZEAMqTPhMGLLAm_gsoTSZj_PfCOGAf2HlqDS_MVpGoPhpMZNLVFly5lt1LQ6JpUGC5htkb8gaPaNPo8-7jmwSxtU5tHqkUjQAvsNbVhCXr8TDfdWTZGob8eW8WwGZu3VwdeVAI1k-jNV3CT60_ZPZdWlbWhexjCd9A-zD84NSSmSNgnRfvBRIX1hN89HIumwCMKaA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-title-md text-white mb-2">Beauty</h3>
+<a class="font-label-sm text-white flex items-center gap-1 hover:underline" href="beauty.html">
+                        Shop Now <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Home & Living -->
+<div class="category-card lg:col-span-3 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-[3/4] lg:aspect-auto">
+<img alt="Home &amp; Living" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A modern Scandinavian living room setup featuring a beige linen sofa, a light oak coffee table, and minimalist ceramic vases. Abundant natural light enters from a large window, highlighting the rich textures and clean lines of the furniture. The mood is serene and comfortable, embodying the reliable retail promise of quality home goods." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiJmd3eMJdkQZr8CKT6yO3p1ErzqFpYjlF3UdHR63kQq8J6kEDA6q4c5m9XqfvnNWVrW65EVcCUDqIaye3Np738mcjtOIx2mhVrgZcTfZmU1M2rg03al0Q5SA7CubLym-v01LiLAMjyKkf-DzBQGMH2GWCstqBpqrm3DLBe_2JorxkYPtW31mSsNJGuyZKQ8rX-WLRnUiSWwtFn3K1XWMI2X2IhIlk9ShOHvbsU7WCfZUeaYMaKveMdRnkP1iyMvi34WUOqE05sIE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-title-md text-white mb-2">Home &amp; Living</h3>
+<a class="font-label-sm text-white flex items-center gap-1 hover:underline" href="#">
+                        Shop Now <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Sports -->
+<div class="category-card lg:col-span-4 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-square">
+<img alt="Sports" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A dynamic athletic scene showcasing high-performance running shoes, a yoga mat, and adjustable dumbbells in a bright, modern fitness studio. The lighting is energetic and high-contrast, reflecting a spirit of health and activity. The design remains clean and utilitarian, with primary green accents subtly visible in the equipment details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbInhmw_WPUHJWk9LlwEZVOG0WgumTGbgdPRuufCOm9-mLbyF3UH8P9z_b3mV-Qb5EWSz1mGvLbQw-6CtXs-5sMsrshnYc9BBW9zsxbJfsAIUzlpF8LzOu-dbyVtA6wx2DgyLPHMVdITZ3aHXwd7ECB_WZx9DdYhz-h4vutg6aXOOaEMFIWLdg-u1XDswZALdLxz6JXq3HEtort5IMIKZeZQ-5RKkOSF9MDCKOiM6OaT7p1ZjEd9KtH3eQNWt3Ew9ba7CepqywwF8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-title-md text-white mb-2">Sports</h3>
+<a class="font-label-sm text-white flex items-center gap-1 hover:underline" href="sports.html">
+                        Shop Now <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Toys & Games (Wide) -->
+<div class="category-card lg:col-span-8 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-[2/1] lg:aspect-auto">
+<img alt="Toys &amp; Games" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A cheerful and organized children's play area with wooden educational toys, colorful building blocks, and soft plush characters on a white rug. The lighting is soft and diffused, creating a joyful yet sophisticated atmosphere. The color palette balances vibrant primary hues with the brand's calm evergreen secondary tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZBP7xAnm_UTG-uZKczAokWHy_2NHX8zSSZqjn_8tMUZj4wMZbc8qqJ_07ONjz1_oKcC60UO9Vqpqvxl1053dzekLv7Ht4i0RQrQl-SdGf2RKFW-WG4YXgX1n2lhguFksrtnT0qyVmC-E-Jakkk7ggG_cfJ91SEgiTfyK7QWC_bSaQzrMkzoqsdy3PMMs7iHNEHn2w4O7awHkYMIrJs4ni0olGia3EyWGU_rpVbX-Wcb17qFT_xybzAZGcAxe36Qso1v_XFz_dUKc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-lg text-white mb-2">Toys &amp; Games</h3>
+<a class="font-label-md text-white flex items-center gap-2 hover:underline" href="#">
+                        Explore Collection <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Fashion (Tall) -->
+<div class="category-card lg:col-span-4 lg:row-span-2 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-[3/4] lg:aspect-auto">
+<img alt="Fashion" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A contemporary fashion editorial shot featuring high-quality minimalist clothing like a tailored wool coat and a crisp white shirt hanging on a sleek wooden rack. The background is a clean, off-white gallery wall. The lighting is soft and even, highlighting the fabric textures and refined craftsmanship of the garments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-I36d7Coaih0F0I6QMBJh5Fe7uF9Lg59OHzKTLn7nm7HKMbjd3PjjEpwJwARxJzT9Pfu4XetNKVojczhDktwL8RS_QMQvPO6W1U_6_82MHhAN9BXcZx55AdGtzzDv4CSE4HZa0uxat0go0vSwekM_CYnQgy_lTgMr5x2PqugsbIS7-H6AQdiXTccxVPDHzNYCMjixxQ-5zgHYaW7dfZ6L2biLGgzybUzDLVoH5-xQxOOCouJF5PahdTP6cO_eXZ3zT-6FZ6WOJZo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-lg text-white mb-2">Fashion</h3>
+<p class="font-body-sm text-white/80 mb-4">Latest seasonal trends and timeless essentials.</p>
+<a class="font-label-md text-white flex items-center gap-2 hover:underline" href="#">
+                        Shop Now <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Grocery -->
+<div class="category-card lg:col-span-8 group relative overflow-hidden bg-surface-container rounded-lg border border-outline-variant aspect-square lg:aspect-auto lg:h-[400px]">
+<img alt="Grocery" class="category-image absolute inset-0 w-full h-full object-cover" data-alt="A vibrant grocery display with fresh, organic vegetables, rustic bread loaves, and artisan pantry goods arranged beautifully in a wooden crate. The lighting is warm and natural, suggesting freshness and farm-to-table quality. The composition is clean and organized, mirroring the meticulous retail standards of the store." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAna3NKqQn-sSp1dpOmVNnDVRIbgIOea6fjyj9t00nDax1C8MgBWg2PNtLpSnSfPabDOBHF65SscCDx1_ZelRx1WZmHjpR9LZ94kbcYle7_2Cvshh37DEbFYQ5ehfKJ_C1ZNGZ-8iNKzkoMejGxUnmHQENe8in8BckIFKZ1iZng0a-AkSi1TTVVTdQSTtYwGpfbrB5d0UNOxM-zzhZdu37d2JU90UsncNeP47k5lUOmsgsRnyIlIYs_s4IVsfwYIPenrKPPHXohcCE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline-lg text-white mb-2">Grocery</h3>
+<a class="font-label-md text-white flex items-center gap-2 hover:underline" href="#">
+                        Browse Fresh <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-desktop flex flex-col items-center gap-base bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-container-max w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex flex-col gap-4">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary">Shree Prakash Genral</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+                    Reliable Retail for Everyone. Bringing quality and convenience to your doorstep since 2024.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-primary">Shop</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">All Products</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">New Arrivals</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Best Sellers</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-primary">Support</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Contact Support</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Shipping Info</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Track Order</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-primary">Company</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-outline-variant mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Shree Prakash Genral. Reliable Retail for Everyone.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('border-b');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('border-b');
+            }
+        });
+
+        // Search bar interaction
+        const searchInput = document.querySelector('input[placeholder="Search..."]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('border-primary');
+            searchInput.parentElement.classList.remove('border-outline-variant');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('border-primary');
+            searchInput.parentElement.classList.add('border-outline-variant');
+        });
+    </script>
+</body></html>

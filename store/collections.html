@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #004d31;
+      border-radius: 10px;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#bfc9c6",
+            "secondary-container": "#dbe5e2",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f9f9f7",
+            "tertiary-container": "#8b001a",
+            "surface-variant": "#e2e3e0",
+            "surface-container-low": "#f4f4f1",
+            "surface": "#f9f9f7",
+            "on-surface": "#1a1c1b",
+            "inverse-primary": "#93d5af",
+            "surface-container-high": "#e8e8e6",
+            "surface-container": "#eeeeec",
+            "on-background": "#1a1c1b",
+            "inverse-surface": "#2f3130",
+            "on-primary-container": "#7cbd99",
+            "on-tertiary-fixed-variant": "#92001c",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#ff908f",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#ffdad8",
+            "on-secondary-fixed": "#141d1c",
+            "primary-fixed": "#aef1ca",
+            "tertiary-fixed-dim": "#ffb3b1",
+            "on-primary-fixed-variant": "#075135",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#dbe5e2",
+            "background": "#f9f9f7",
+            "primary": "#003420",
+            "on-primary-fixed": "#002112",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "outline-variant": "#bfc9c1",
+            "primary-container": "#004d31",
+            "surface-dim": "#dadad8",
+            "primary-fixed-dim": "#93d5af",
+            "on-error": "#ffffff",
+            "tertiary": "#61000f",
+            "surface-tint": "#296a4b",
+            "outline": "#707972",
+            "on-tertiary-fixed": "#410007",
+            "on-secondary-container": "#5d6664",
+            "on-secondary-fixed-variant": "#3f4947",
+            "secondary": "#57605e",
+            "inverse-on-surface": "#f1f1ef",
+            "surface-container-highest": "#e2e3e0",
+            "on-surface-variant": "#404943",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "16px",
+            "container-max": "1280px",
+            "base": "8px",
+            "gutter": "24px",
+            "margin-desktop": "32px"
+          },
+          "fontFamily": {
+            "label-md": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "title-md": ["Hanken Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "label-sm": ["Hanken Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-xl": ["Hanken Grotesk"],
+            "headline-lg": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+            "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar (Fixed) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-surface dark:bg-on-surface max-w-container-max mx-auto border-b border-surface-variant dark:border-outline-variant">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim" href="#">Shree Prakash Genral</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Offers</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">New Arrivals</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Best Sellers</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex relative">
+<input class="pl-4 pr-10 py-2 rounded-full border border-outline bg-surface-container-lowest text-body-sm font-body-sm w-64 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search products..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">favorite</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">account_circle</button>
+</div>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Banner -->
+<section class="relative h-[500px] w-full overflow-hidden flex items-center justify-center">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" src="assets/collection.png"/>
+<div class="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-headline-xl text-headline-xl text-white mb-4 drop-shadow-lg">Our Collections</h1>
+<p class="text-white/90 max-w-xl mx-auto font-body-lg text-body-lg">Explore our curated selection of premium electronics, fashion, and home essentials designed for modern living.</p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-24 space-y-8 bg-surface-container-lowest p-6 border border-outline-variant rounded-lg">
+<div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">Category</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Electronics</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Fashion</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Home Essentials</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Beauty</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Accessories</span>
+</label>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<h3 class="font-title-md text-title-md mb-4 text-primary">Price Range</h3>
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>$0</span>
+<span>$5000+</span>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<h3 class="font-title-md text-title-md mb-4 text-primary">Brand</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">Lux Premium</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">TechFlow</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+<span class="font-body-sm text-body-sm group-hover:text-primary transition-colors">UrbanWear</span>
+</label>
+</div>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md text-label-md hover:opacity-90 transition-opacity">Apply Filters</button>
+</div>
+</aside>
+<!-- Collections Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+<!-- Electronics -->
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist high-angle shot of professional electronic gadgets including a sleek laptop, wireless headphones, and a smart speaker arranged on a textured grey concrete surface. The lighting is bright and even, highlighting the metallic finishes and premium textures. The scene exudes a sense of technological sophistication and modern productivity." src="assets/el.png"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">Electronics</h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">42 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Cutting-edge technology for work, play, and everything in between.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-between w-full px-6 py-3 bg-primary text-on-primary rounded font-label-md text-label-md group/btn transition-colors" href="electronics.html">
+                  Shop Electronics
+                  <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Fashion -->
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated fashion photography setup featuring a collection of high-end accessories such as a designer leather handbag, silk scarf, and tortoiseshell sunglasses artfully arranged. The palette is a blend of deep olive greens and soft neutrals, presented in a crisp, bright light-mode environment that emphasizes luxury and meticulous organization." src="assets/fas.png"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">Fashion</h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">85 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Curated apparel and accessories that define your unique personal style.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-between w-full px-6 py-3 bg-primary text-on-primary rounded font-label-md text-label-md group/btn transition-colors" href="#">
+                  Shop Fashion
+                  <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Home Essentials -->
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern and serene living room detail showcasing premium home essentials like a designer ceramic vase, linen-bound notebooks, and a minimalist lamp on a wooden sideboard. The atmosphere is warm yet professional, with soft morning light filtering through a nearby window, creating a cozy and organized domestic setting in a light-mode aesthetic." src="assets/he.png"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">Home Essentials</h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">120 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Functional elegance for your sanctuary. Transform your living space.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-between w-full px-6 py-3 bg-primary text-on-primary rounded font-label-md text-label-md group/btn transition-colors" href="#">
+                  Shop Home
+                  <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Beauty -->
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A flat lay photography of premium beauty products, featuring elegant glass bottles of skincare, minimal matte-finish cosmetics, and organic textured packaging. The scene is illuminated with bright, soft-key lighting that emphasizes clarity and purity. The color palette is dominated by soft whites, creams, and earthy tones, reflecting a clean and professional beauty brand identity." src="assets/b.png"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">Beauty</h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">67 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Premium skincare and cosmetics crafted for timeless, natural radiance.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-between w-full px-6 py-3 bg-primary text-on-primary rounded font-label-md text-label-md group/btn transition-colors" href="beauty.html">
+                  Shop Beauty
+                  <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-low dark:bg-inverse-surface mt-12">
+<div class="flex flex-col gap-4 max-w-sm">
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">Shree Prakash Genral</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your trusted destination for quality and reliability. Delivering excellence since 2012 with a commitment to customer satisfaction and premium service.</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">potted_plant</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">mail</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-12">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-primary font-bold">Quick Links</h4>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">About Us</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">Shipping Policy</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-primary font-bold">Support</h4>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">Contact Support</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">Store Locator</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:underline transition-all" href="#">FAQs</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-primary font-bold">Newsletter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[200px]">Subscribe for updates and exclusive offers.</p>
+<div class="flex gap-2">
+<input class="px-3 py-2 rounded border border-outline bg-white text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md">Join</button>
+</div>
+</div>
+</div>
+</footer>
+<div class="w-full bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant py-4 px-margin-desktop text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Shree Prakash Genral. All rights reserved.</p>
+</div>
+<script>
+    // Handle navigation scrolling effects
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('shadow-md');
+        nav.classList.add('py-2');
+        nav.classList.remove('py-4');
+      } else {
+        nav.classList.remove('shadow-md');
+        nav.classList.add('py-4');
+        nav.classList.remove('py-2');
+      }
+    });
+
+    // Add interactivity to checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', (e) => {
+        const span = e.target.nextElementSibling;
+        if (e.target.checked) {
+          span.classList.add('text-primary', 'font-bold');
+        } else {
+          span.classList.remove('text-primary', 'font-bold');
+        }
+      });
+    });
+  </script>
+</body></html>

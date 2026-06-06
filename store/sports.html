@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peak Performance | Shree Prakash Genral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script type="module" src="sports.js"></script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f9f9f7;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .product-card-hover:hover .wishlist-icon {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #004D31;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed cursor-pointer transition-all active:scale-95">
+            Shree Prakash Genral
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-lg text-body-lg text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 cursor-pointer transition-all active:scale-95" href="#">Sports</a>
+<a class="font-body-lg text-body-lg text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer transition-all active:scale-95" href="electronics.html">Electronic</a>
+<a class="font-body-lg text-body-lg text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer transition-all active:scale-95" href="beauty.html">Beauty</a>
+<a class="font-body-lg text-body-lg text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer transition-all active:scale-95" href="offers_page.html">Offers</a>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined cursor-pointer transition-all active:scale-95 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">shopping_cart</span>
+<span class="material-symbols-outlined cursor-pointer transition-all active:scale-95 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">favorite</span>
+<span class="material-symbols-outlined cursor-pointer transition-all active:scale-95 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">person</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[600px] md:h-[720px] overflow-hidden">
+<img alt="Peak Performance Sports Collection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Xd8eEJzoPHZ1yj4k6A8ASrekEHKe7X3YTFUQ4HNpnMNyVjmts9OrXUqBP9OKUYjm_jJNGM08DOwv4S9tebNn0F5eLUML5ATkI-gHFHfXfzpCyNogDPNKtQnL5SzbUnTwupUE8A5bzlRJRBhC1jBAJiriOo2aRmIMpqaJKUB5uNKgHaDUPYqpDssCC2Cmf0OkNPn54k4RpzmRq5JmwHh5Hlq-aTkd9Y2zzpKbNuHiXBun9zvWEk7pMz4hiGSKKApmHfkj3CdWCvo"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent flex flex-col justify-center px-margin-mobile md:px-margin-desktop">
+<div class="max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl text-white mb-6">Peak Performance</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-lg">
+                    Elevate your training with our meticulously engineered athletic gear. Designed for durability, comfort, and ultimate speed.
+                </p>
+<button class="bg-primary-container text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all active:scale-95 shadow-lg">
+                    Shop All Sports
+                </button>
+</div>
+</div>
+</header>
+<!-- Curated Athletic Gear Section -->
+<main class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-10">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container mb-2 block">Premium Selection</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Curated Athletic Gear</h2>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-2 border border-outline rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-outline rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Running Shoes -->
+<div class="group product-card-hover flex flex-col bg-surface border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md cursor-pointer">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A pair of high-performance neon green and black professional running shoes showcased on a minimalist white platform. The lighting is crisp and professional, highlighting the aerodynamic textures and specialized sole grip. The atmosphere is energetic and focused, aligning with a premium sports brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqC5jJSqRuteZatlBxiY0FUwUJRIujwUjmAtv514114oy2fcJpVbzkLADINVHbazM_3xPbYIf_JZ7CLccVn4bBS3plGLoPsUuhJa8_WN4E-h_KsMQ1xSxbDO10zu_IV4EwLn3BzobEy6Pv5gtoj6ilnD0CqGq9bpBsI5mqysbz0_recj23PSIcboe5eDYV0m1_esqL-xDSAz5w5W5VnbbhsFS9LCLESEaVTK7L8rniIPgE_nPojjR861qZgJkAQWOenHMFSbEUVQ"/>
+<div class="absolute top-3 left-3 bg-tertiary-container text-white px-2 py-1 rounded font-label-sm text-label-sm">
+                        NEW
+                    </div>
+<button class="wishlist-icon absolute bottom-3 right-3 p-2 bg-white/90 rounded-full text-secondary opacity-0 transition-all hover:text-error">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Velocity Pro Runner</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary">$129.00</span>
+<span class="font-label-sm text-label-sm text-outline line-through">$159.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.9 (128 reviews)</span>
+</div>
+<button onclick="addToCart('Velocity Pro Runner', 129, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDWqC5jJSqRuteZatlBxiY0FUwUJRIujwUjmAtv514114oy2fcJpVbzkLADINVHbazM_3xPbYIf_JZ7CLccVn4bBS3plGLoPsUuhJa8_WN4E-h_KsMQ1xSxbDO10zu_IV4EwLn3BzobEy6Pv5gtoj6ilnD0CqGq9bpBsI5mqysbz0_recj23PSIcboe5eDYV0m1_esqL-xDSAz5w5W5VnbbhsFS9LCLESEaVTK7L8rniIPgE_nPojjR861qZgJkAQWOenHMFSbEUVQ')" class="mt-3 w-full bg-primary text-on-primary py-2 rounded font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+Add to Cart
+</button>
+</div>
+</div>
+<!-- Smart Fitness Watch -->
+<div class="group product-card-hover flex flex-col bg-surface border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md cursor-pointer">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek black professional smartwatch with a glowing green digital interface displaying fitness metrics. The watch is positioned against a clean, modern backdrop with subtle tonal shadows that convey depth and sophistication. The overall aesthetic is minimalist and high-tech, emphasizing reliability and meticulously organized data." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx0p2sD6M1AKtpn8HAO9Lz3UBR3ZkIP67jOGGRFcgYkVuMJlnoABqJ5BG8cvRckr5KZWCSW5VWIllfs-ZB_ie69dT5DNBmpAIEDLatjLheCm_3dXx0F-wqpaI-hNz0D1153Esop47piKDrkKwJaFdqV4J6ut5cpo4qoDCshlMyQGOzQCcEFeH9zX2XtJyYSCJat32KBXdIPNgTf1BiO-9FpPcMnE9DPzoNhGLb3WtjPHWA3B7agbukgFsC2kRzAOb5FpX4uraFRMc"/>
+<button class="wishlist-icon absolute bottom-3 right-3 p-2 bg-white/90 rounded-full text-secondary opacity-0 transition-all hover:text-error">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Smart Fitness Watch</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary">$249.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.8 (94 reviews)</span>
+</div>
+<button onclick="addToCart('Smart Fitness Watch', 249, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBx0p2sD6M1AKtpn8HAO9Lz3UBR3ZkIP67jOGGRFcgYkVuMJlnoABqJ5BG8cvRckr5KZWCSW5VWIllfs-ZB_ie69dT5DNBmpAIEDLatjLheCm_3dXx0F-wqpaI-hNz0D1153Esop47piKDrkKwJaFdqV4J6ut5cpo4qoDCshlMyQGOzQCcEFeH9zX2XtJyYSCJat32KBXdIPNgTf1BiO-9FpPcMnE9DPzoNhGLb3WtjPHWA3B7agbukgFsC2kRzAOb5FpX4uraFRMc')" class="mt-3 w-full bg-primary text-on-primary py-2 rounded font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+Add to Cart
+</button>
+</div>
+</div>
+<!-- Yoga Mat -->
+<div class="group product-card-hover flex flex-col bg-surface border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md cursor-pointer">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A premium deep evergreen textured yoga mat partially unrolled on a clean light gray stone floor. The lighting is soft and natural, highlighting the non-slip grip pattern and high-quality materials. The mood is serene and professional, reflecting a dependable and welcoming digital storefront for fitness enthusiasts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBxPzC-ozfOYjKilcTBovPCrJU5O3uJ_D-gXMdMpcNN5fCIZhj7hrBdXdeBTDZK7tO5Q6l3C10LDxx5l1L2iGAcaUiAa1BLE3Ahhtf2pYV9WPPFnjfI3aNLEtOQ_Ku9YwBy-9uZ76ujIHXrYqfTMlCEXzpl-C_X8FdkcN_mimQ9llorozf_5S-NlCJd6kRFl69VlOooD-ydQJLeYG2COCVFuVxUTAEZquM7tYpJlwRGbI0Fllc-KVE-mi1RqK-Ki4St-EThkzZe2M"/>
+<button class="wishlist-icon absolute bottom-3 right-3 p-2 bg-white/90 rounded-full text-secondary opacity-0 transition-all hover:text-error">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">High-Grip Yoga Mat</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary">$45.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5.0 (56 reviews)</span>
+</div>
+<button onclick="addToCart('High-Grip Yoga Mat', 45, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBxPzC-ozfOYjKilcTBovPCrJU5O3uJ_D-gXMdMpcNN5fCIZhj7hrBdXdeBTDZK7tO5Q6l3C10LDxx5l1L2iGAcaUiAa1BLE3Ahhtf2pYV9WPPFnjfI3aNLEtOQ_Ku9YwBy-9uZ76ujIHXrYqfTMlCEXzpl-C_X8FdkcN_mimQ9llorozf_5S-NlCJd6kRFl69VlOooD-ydQJLeYG2COCVFuVxUTAEZquM7tYpJlwRGbI0Fllc-KVE-mi1RqK-Ki4St-EThkzZe2M')" class="mt-3 w-full bg-primary text-on-primary py-2 rounded font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+Add to Cart
+</button>
+</div>
+</div>
+<!-- Training Backpack -->
+<div class="group product-card-hover flex flex-col bg-surface border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md cursor-pointer">
+<div class="relative aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A rugged yet modern black training backpack with green accent zippers and specialized compartments for sports gear. The backpack is presented in a bright, minimalist studio setting that emphasizes its functional design and utilitarian refinement. The image captures a sense of meticulous organization and professional quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD53dgPdXHvig6vyhrJtknfSX9msxzdBd347aPL04rqDYV6gO_us0-30yqCHCooJALKHx-wEgxIbFdIS1m-W8sSaAIdIiyGMF1gNyCrju7qlNkEJgax0gpqYwpwsSCaqPRQIWL3_RLSkTfsjhknK2AdiUfH3evlziCTkTN8Rt-mj0Zi_gK1UEWf1rR8eU6YNgLeCqk5G6ln4tcXW1urk8iH1jtoeAAAVRJk3obEPJaYmRB5Y1et1qcMtgXlLS2nrSgpGlAYMiMfXnU"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-2 py-1 rounded font-label-sm text-label-sm">
+                        POPULAR
+                    </div>
+<button class="wishlist-icon absolute bottom-3 right-3 p-2 bg-white/90 rounded-full text-secondary opacity-0 transition-all hover:text-error">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Training Backpack</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary">$89.00</span>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.7 (210 reviews)</span>
+</div>
+<button onclick="addToCart('Training Backpack', 89, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD53dgPdXHvig6vyhrJtknfSX9msxzdBd347aPL04rqDYV6gO_us0-30yqCHCooJALKHx-wEgxIbFdIS1m-W8sSaAIdIiyGMF1gNyCrju7qlNkEJgax0gpqYwpwsSCaqPRQIWL3_RLSkTfsjhknK2AdiUfH3evlziCTkTN8Rt-mj0Zi_gK1UEWf1rR8eU6YNgLeCqk5G6ln4tcXW1urk8iH1jtoeAAAVRJk3obEPJaYmRB5Y1et1qcMtgXlLS2nrSgpGlAYMiMfXnU')" class="mt-3 w-full bg-primary text-on-primary py-2 rounded font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Newsletter Section -->
+<section class="bg-primary-container text-white py-16 px-margin-mobile md:px-margin-desktop overflow-hidden relative">
+<div class="absolute -right-20 top-0 w-64 h-64 bg-on-primary-container/20 rounded-full blur-3xl"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-4">Join the Velocity Elite</h2>
+<p class="font-body-lg text-body-lg mb-8 text-on-primary-container">Subscribe to receive early access to new collections, exclusive training tips, and member-only offers.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Subscribed!');">
+<input class="flex-grow px-6 py-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-on-primary-container transition-all" placeholder="Enter your email address" required="" type="email"/>
+<button class="bg-white text-primary-container font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-surface-container-highest transition-all active:scale-95 whitespace-nowrap" type="submit">
+                    Subscribe Now
+                </button>
+</form>
+<p class="font-body-sm text-body-sm mt-4 text-on-primary-container/80">By subscribing, you agree to our Privacy Policy and Terms of Service.</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center bg-surface-container-low dark:bg-surface-container-lowest flat no shadows">
+<div class="flex flex-col gap-4">
+<div class="font-title-md text-title-md font-bold text-on-surface dark:text-on-background">
+                Shree Prakash Genral
+            </div>
+<p class="text-secondary dark:text-secondary-fixed-dim font-body-sm text-body-sm max-w-sm">
+                Your trusted destination for premium athletic gear and professional sports equipment since 2024.
+            </p>
+<div class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm">
+                © 2024 Shree Prakash Genral. All rights reserved.
+            </div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:justify-self-end">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Company</h4>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Support</h4>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Shipping Policy</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- Simple Interactivity -->
+<script>
+        // Toggle mobile menu if needed (minimal implementation)
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Shree Prakash Genral UI Initialized');
+        });
+
+        async function addToCart(name, price, image) {
+            const customerEmail = localStorage.getItem('customerEmail');
+
+            if (!customerEmail) {
+                alert('Please subscribe first');
+                return;
+            }
+
+            const safeEmail = customerEmail.replace(/\./g, '_').replace(/@/g, '_');
+            const url = `https://store-8721e-default-rtdb.firebaseio.com/carts/${safeEmail}.json`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name,
+                        price: Number(price),
+                        image,
+                        quantity: 1
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Unable to add item to cart');
+                }
+
+                alert('Added to cart successfully');
+                window.location.href = 'addtocart.html';
+            } catch (error) {
+                console.error(error);
+                alert(error.message);
+            }
+        }
+    </script>
+</body></html>
