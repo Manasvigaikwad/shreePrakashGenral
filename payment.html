@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Information - Shree Prakash Genral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script type="module" src="payment.js"></script>
+<script src="script.js"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-lg text-on-surface">
+<!-- Top Navigation Bar -->
+  <header class="navbar">
+
+        <div class="logo">
+            Shree Prakash General
+        </div>
+
+        <nav>
+            <a class="active">Home</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="offers_page.html">Offers</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <div class="search">
+
+                <input type="text" id="searchInput" placeholder="Search products...">
+
+                <div id="searchResults">
+                    <a href="#">Smartphones</a>
+                    <a href="#">Headphones</a>
+                    <a href="#">Sneakers</a>
+                    <a href="#">Backpacks</a>
+                </div>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+    </header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-gutter">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="bg-primary-container rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
+<div class="p-12 md:w-3/5 text-on-primary">
+<h1 class="font-headline-xl text-headline-xl mb-4 text-white">Payment &amp; Security</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">Your security is our top priority. We use industry-standard encryption and verified payment partners to ensure every transaction is 100% safe and secure.</p>
+<div class="flex flex-wrap gap-4">
+<span class="flex items-center gap-2 bg-surface/10 px-4 py-2 rounded-full border border-surface/20">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span class="text-label-md font-label-md">SSL Encrypted</span>
+</span>
+<span class="flex items-center gap-2 bg-surface/10 px-4 py-2 rounded-full border border-surface/20">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span class="text-label-md font-label-md">PCI DSS Compliant</span>
+</span>
+</div>
+</div>
+<div class="md:w-2/5 h-64 md:h-full w-full relative min-h-[300px]">
+<img alt="Secure Payment Interface" class="absolute inset-0 w-full h-full object-cover opacity-90" data-alt="A high-end, close-up photograph of a sleek, modern smartphone displaying a secure payment success screen with a green checkmark. The device rests on a minimalist marble surface next to a sophisticated leather wallet. Soft, natural morning light creates elegant highlights and a professional, reliable atmosphere. The color palette is dominated by deep evergreen accents and clean, bright white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXeHevcfNbtPvd-PDlC0dDm0B8BqPizDoC59OIx2oXjUg5d2LUimLs8kV7xuAzFwZ9otvTZi7XETPyrwW9q22fQPJwbSjQtL_UiIYZBXFcs4DE5tpQoSeBzoVtj3AN4iS9QerZ5JWyTyvCL-_usG1Xn1ydpmkQSHtXT0h_xJZy2SJfGRKMu1loP4xyrhL1h5pMbV0zjvWHqvsqLFwGsOXvnPFSc2N4ceNoz8vyJ7qWyujFJ-TLl8dORUCWPI4KKaqnaPcGOME1D3o"/>
+</div>
+</div>
+</section>
+<!-- Payment Methods Bento Grid -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Accepted Payment Methods</h2>
+<div class="h-px flex-grow mx-8 bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Cards -->
+<div class="bento-card bg-surface-container-low p-8 rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="credit_card">credit_card</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Cards</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Credit &amp; Debit (Visa, Mastercard, RuPay, Amex)</p>
+</div>
+<!-- UPI -->
+<div class="bento-card bg-surface-container-low p-8 rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">UPI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant payments via GPay, PhonePe, Paytm, and more</p>
+</div>
+<!-- Net Banking -->
+<div class="bento-card bg-surface-container-low p-8 rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="account_balance">account_balance</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Net Banking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct bank transfer from 50+ major banks</p>
+</div>
+<!-- Wallets -->
+<div class="bento-card bg-surface-container-low p-8 rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="payments">payments</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Wallets</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Digital wallets like Amazon Pay and Mobikwik</p>
+</div>
+</div>
+</section>
+<!-- Safe Shopping Guarantee -->
+<section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant">
+<div>
+<img alt="Customer Protection" class="rounded-xl shadow-sm w-full h-80 object-cover" data-alt="A professional photograph of a person holding a physical credit card while using a laptop in a clean, brightly lit home office. The lighting is soft and airy, emphasizing a sense of calm and safety. The desk is organized with a small green plant, reinforcing the brand's forest green identity. The overall aesthetic is one of corporate reliability and effortless digital commerce." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP9UkopsYlJ2HsRxTQjoHw5vK6aSI_yEOeBN3AOSfJf2XmSs4IH8lfQ57hPz42uJ0SyZlGQtVIEoaV253vMbqClndoeQ-UNQ3qaTkYbCSnujlvepw2UTF2SNVHYdJGvq6sux7ocINhpudhrqFdRp0ebcOYDwEsE0mTEUWXQNaLJcd2yFCtWdZcoXhFbPKKHQPzYxlYEAvtkuz2Ucjrtrafz4HRyxzAc4Pd4PrmUdN_stTLlLy8uoLie2IAVkYHlYBdWVr--ZjI1Gs"/>
+</div>
+<div>
+<span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2 block">Peace of Mind</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Safe Shopping Guarantee</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="enhanced_encryption">enhanced_encryption</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">Advanced SSL Encryption</h4>
+<p class="text-on-surface-variant text-body-lg">Every byte of data you share with us is encrypted using 256-bit SSL technology, making it unreadable to unauthorized parties.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="lock_reset">lock_reset</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">Secure Gateways</h4>
+<p class="text-on-surface-variant text-body-lg">We partner only with industry-leading payment gateways that are PCI-DSS Level 1 certified for maximum transaction safety.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="privacy_tip">privacy_tip</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">Privacy Commitment</h4>
+<p class="text-on-surface-variant text-body-lg">Your card details are never stored on our servers. We only use secure tokens to process your orders.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQs -->
+<section class="max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary mb-10">Payment Security FAQs</h2>
+<div class="space-y-4">
+<details class="group bg-surface border border-outline-variant rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md">Are my card details stored by Shree Prakash Genral?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        No. We do not store any credit/debit card information on our servers. All card details are processed through encrypted channels directly to our banking partners who are PCI-DSS certified.
+                    </div>
+</details>
+<details class="group bg-surface border border-outline-variant rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md">What happens if a transaction fails?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        In case of a failed transaction where money has been deducted, the amount is usually automatically reversed to your account within 5-7 business days by your bank. Our support team is always available to help track such cases.
+                    </div>
+</details>
+<details class="group bg-surface border border-outline-variant rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md">Is it safe to use UPI for large transactions?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Absolutely. UPI transactions are backed by NPCI (National Payments Corporation of India) and require a secure MPIN. They are as safe as traditional banking methods for any amount within your bank's daily limit.
+                    </div>
+</details>
+<details class="group bg-surface border border-outline-variant rounded-lg">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md">How do I know the payment page is secure?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Look for the padlock icon in your browser's address bar and ensure the URL begins with "https://". This indicates an active SSL connection protecting your data.
+                    </div>
+</details>
+</div>
+</section>
+<!-- Newsletter / Contact for help -->
+<section class="bg-surface-container-high rounded-xl p-12 text-center border border-outline-variant">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Still have questions?</h3>
+<p class="text-on-surface-variant mb-8 max-w-xl mx-auto">Our dedicated payment support team is available 24/7 to assist you with any transaction-related queries.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+                    Contact Support
+                </button>
+<button class="border border-primary text-primary px-8 py-3 rounded-lg font-label-md flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    Email Helpdesk
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+ <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>Shree Prakash General</h4>
+                <p>
+                    Quality products at the best prices.
+                </p>
+            </div>
+
+            <div>
+                <h4>Help</h4>
+                <a href="payment.html">Payments</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+            <div>
+                <h4>Policies</h4>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>8237943592</p>
+                <p>shreeprakashgeneral@gmail.com</p>
+            </div>
+
+        </div>
+
+    </footer>
+<script>
+        // Simple interactive script for handling hover states or basic logic if needed
+        document.querySelectorAll('details').forEach((el) => {
+            el.addEventListener('toggle', (e) => {
+                if (el.open) {
+                    document.querySelectorAll('details').forEach((otherEl) => {
+                        if (otherEl !== el) otherEl.open = false;
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

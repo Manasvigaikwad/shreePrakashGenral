@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Order Tracking | Shree Prakash Genral</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+        <script src="script.js"></script>
+    <script type="module" src="trackorder.js">
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .tracker-line {
+            height: 2px;
+            background: #E2E3E0;
+            flex-grow: 1;
+            position: relative;
+            top: 14px;
+        }
+
+        .tracker-line.active {
+            background: #003420;
+        }
+
+        .timeline-line {
+            width: 2px;
+            background: #E2E3E0;
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            bottom: -8px;
+        }
+
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-lg">
+    <!-- TopNavBar -->
+   <header class="navbar">
+
+        <div class="logo">
+            Shree Prakash General
+        </div>
+
+        <nav>
+            <a class="active">Home</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="offers_page.html">Offers</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <div class="search">
+
+                <input type="text" id="searchInput" placeholder="Search products...">
+
+                <div id="searchResults">
+                    <a href="#">Smartphones</a>
+                    <a href="#">Headphones</a>
+                    <a href="#">Sneakers</a>
+                    <a href="#">Backpacks</a>
+                </div>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+    </header>
+    <main class="max-w-container-max mx-auto px-margin-desktop py-12">
+        <!-- Header Section -->
+        <div class="mb-12 border-b border-outline-variant pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div>
+                    <h1 id="orderId" class="font-headline-xl text-headline-xl text-primary mb-2"></h1>
+                    <div class="flex items-center gap-3">
+                        <span id="orderDate"
+                            class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm">In
+                            Transit</span>
+                        <p class="text-on-surface-variant font-body-sm"></p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="px-6 py-2 rounded-full border border-primary text-primary font-label-md hover:bg-primary-fixed-dim transition-all">Back
+                        to Orders</button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md hover:opacity-90 transition-all">Help
+                        &amp; Support</button>
+                </div>
+            </div>
+        </div>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+            <!-- Left Column (Tracker & Estimate) -->
+            <div class="lg:col-span-2 space-y-gutter">
+                <!-- Delivery Estimate Card -->
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">local_shipping</span>
+                        </div>
+                        <div>
+                            <p class="text-on-surface-variant font-label-md uppercase tracking-wider">Estimated Delivery
+                            </p>
+                            <h2 id="estimatedDelivery" class="text-headline-lg font-headline-lg text-primary"></h2>
+                        </div>
+                    </div>
+                    <!-- Progress Tracker -->
+                    <div class="flex items-start w-full gap-0 pt-4">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center flex-1">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white z-10">
+                                <span class="material-symbols-outlined text-sm"
+                                    style="font-variation-settings: 'FILL' 1;">check</span>
+                            </div>
+                            <span class="mt-3 font-label-md text-primary text-center">Order Placed</span>
+                            <span class="text-xs text-on-surface-variant" id="placedDateVariant"></span>
+                        </div>
+                        <div class="tracker-line active"></div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center flex-1">
+                            <div
+                                class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white z-10">
+                                <span class="material-symbols-outlined text-sm"
+                                    style="font-variation-settings: 'FILL' 1;">check</span>
+                            </div>
+                            <span class="mt-3 font-label-md text-primary text-center">Shipped</span>
+                            <span class="text-xs text-on-surface-variant" id="shippedDate"></span>
+                        </div>
+                        <div class="tracker-line active"></div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center flex-1">
+                            <div
+                                class="w-8 h-8 rounded-full bg-surface-container border-2 border-primary flex items-center justify-center z-10">
+                                <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                            </div>
+                            <span class="mt-3 font-label-md text-primary text-center">Out for Delivery</span>
+                            <span class="text-xs text-on-surface-variant" id="deliverytext"></span>
+                        </div>
+                        <div class="tracker-line"></div>
+                        <!-- Step 4 -->
+                        <div class="flex flex-col items-center flex-1">
+                            <div
+                                class="w-8 h-8 rounded-full bg-surface-container border-2 border-outline-variant flex items-center justify-center z-10">
+                            </div>
+                            <span class="mt-3 font-label-md text-on-surface-variant text-center">Delivered</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shipment Details Card -->
+                <div id="productsContainer" class="p-6 space-y-6"></div>
+            </div>
+            <!-- Right Column (Activity History) -->
+            <div class="lg:col-span-1">
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 h-full shadow-sm">
+                    <h3 class="font-title-md text-title-md text-primary mb-8 flex items-center gap-2">
+                        <span class="material-symbols-outlined">history</span>
+                        Activity History
+                    </h3>
+                    <div class="space-y-8 relative">
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative pl-8 pb-8">
+                            <div class="timeline-line"></div>
+                            <div
+                                class="absolute left-0 top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-primary-fixed ring-opacity-50 z-10">
+                            </div>
+                            <div>
+                                <p class="font-label-md text-primary">Oct 26, 9:30 AM</p>
+                                <h4 class="font-body-lg text-on-surface font-semibold mt-1">Out for Delivery</h4>
+                                <p class="text-on-surface-variant text-body-sm mt-1">Package is with our delivery
+                                    partner and will be delivered today.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative pl-8 pb-8">
+                            <div class="timeline-line"></div>
+                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-outline z-10"></div>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">Oct 25, 2:00 PM</p>
+                                <h4 class="font-body-lg text-on-surface mt-1">Arrived at Local Facility</h4>
+                                <p class="text-on-surface-variant text-body-sm mt-1">Your package has reached the
+                                    sorting center in your city.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative pl-8 pb-8">
+                            <div class="timeline-line"></div>
+                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-outline z-10"></div>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">Oct 25, 8:15 AM</p>
+                                <h4 id="orderStatus" class="font-body-lg text-on-surface mt-1"></h4>
+                                <p class="text-on-surface-variant text-body-sm mt-1">Package departed from the main
+                                    regional hub.</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="timeline-item relative pl-8">
+                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-outline z-10"></div>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">Oct 24, 4:45 PM</p>
+                                <h4 class="font-body-lg text-on-surface mt-1">Order Placed</h4>
+                                <p class="text-on-surface-variant text-body-sm mt-1">We have received your order and it
+                                    is being prepared for shipping.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 pt-8 border-t border-outline-variant">
+                        <div class="bg-surface-container p-4 rounded-lg">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary">info</span>
+                                <div>
+                                    <p class="font-label-md text-primary">Need more info?</p>
+                                    <p class="text-body-sm text-on-surface-variant">Contact our carrier partner with
+                                        tracking ID: <span class="font-mono font-bold">TRK-990022</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Additional Actions / Suggestions -->
+        <section class="mt-16">
+            <h3 class="font-title-md text-title-md text-primary mb-6">Frequently Asked Questions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="p-6 bg-surface-container-low rounded-xl border border-outline-variant hover:border-primary transition-colors cursor-pointer">
+                    <h5 class="font-label-md text-primary mb-2">Can I change my address?</h5>
+                    <p class="text-body-sm text-on-surface-variant">Unfortunately, address changes are not possible once
+                        an order is 'Out for Delivery'.</p>
+                </div>
+                <div
+                    class="p-6 bg-surface-container-low rounded-xl border border-outline-variant hover:border-primary transition-colors cursor-pointer">
+                    <h5 class="font-label-md text-primary mb-2">How do I return items?</h5>
+                    <p class="text-body-sm text-on-surface-variant">You can initiate a return within 30 days of delivery
+                        through your order history.</p>
+                </div>
+                <div
+                    class="p-6 bg-surface-container-low rounded-xl border border-outline-variant hover:border-primary transition-colors cursor-pointer">
+                    <h5 class="font-label-md text-primary mb-2">Missing something?</h5>
+                    <p class="text-body-sm text-on-surface-variant">If your package is missing items, please contact
+                        support immediately with photos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>Shree Prakash General</h4>
+                <p>
+                    Quality products at the best prices.
+                </p>
+            </div>
+
+            <div>
+                <h4>Help</h4>
+                <a href="payment.html">Payments</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+            <div>
+                <h4>Policies</h4>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>8237943592</p>
+                <p>shreeprakashgeneral@gmail.com</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        if (searchInput && searchResults) {
+
+            const items = searchResults.querySelectorAll("a");
+
+            searchInput.addEventListener("input", function () {
+
+                const value = this.value.toLowerCase();
+
+                let found = false;
+
+                items.forEach(item => {
+
+                    if (item.textContent.toLowerCase().includes(value)) {
+                        item.style.display = "block";
+                        found = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+
+                });
+
+                searchResults.style.display =
+                    found && value !== "" ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+
+</html>

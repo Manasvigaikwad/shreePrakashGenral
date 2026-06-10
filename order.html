@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Orders - Shree Prakash Genral</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom scrollbar for clean UI */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bfc9c1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #707972;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Shree Prakash General
+        </div>
+
+        <nav>
+            <a class="active">Home</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="sports.html">Sports</a>
+            <a href="offers_page.html">Offers</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <div class="search">
+
+                <input type="text" id="searchInput" placeholder="Search products...">
+
+                <div id="searchResults">
+                    <a href="#">Smartphones</a>
+                    <a href="#">Headphones</a>
+                    <a href="#">Sneakers</a>
+                    <a href="#">Backpacks</a>
+                </div>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+        <!-- Page Header -->
+        <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h1 class="font-headline-lg text-headline-lg text-primary-container mb-2">My Orders</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Review and track your recent purchases with
+                    Shree Prakash Genral.</p>
+            </div>
+            <!-- Simple Tab Filters -->
+            <div class="flex bg-surface-container p-1 rounded-lg">
+                <button
+                    class="px-4 py-2 font-label-md text-label-md bg-white text-primary-container shadow-sm rounded-md">All
+                    Orders</button>
+                <button
+                    class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">In
+                    Transit</button>
+                <button
+                    class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">Delivered</button>
+            </div>
+        </div>
+        <!-- Orders List (Asymmetric/Bento style influences) -->
+        <div id="ordersContainer" class="grid grid-cols-1 gap-6"></div>
+        <!-- Pagination or Load More -->
+        <div class="mt-12 flex justify-center">
+            <button
+                class="group flex items-center gap-2 font-label-md text-label-md text-primary-container hover:bg-primary-fixed px-6 py-3 rounded-full transition-all">
+                Load Older Orders
+                <span class="material-symbols-outlined transition-transform group-hover:translate-y-1"
+                    data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+            </button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>Shree Prakash General</h4>
+                <p>
+                    Quality products at the best prices.
+                </p>
+            </div>
+
+            <div>
+                <h4>Help</h4>
+                <a href="payment.html">Payments</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+            <div>
+                <h4>Policies</h4>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>8237943592</p>
+                <p>shreeprakashgeneral@gmail.com</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        // Simple scroll reveal interaction for cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.bg-surface-container-lowest');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('opacity-100', 'translate-y-0');
+                            entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-500', 'ease-out');
+                observer.observe(card);
+            });
+        });
+    </script>
+    <script>
+
+        function trackOrder(orderId) {
+            window.location.href =
+                "trackorder.html?id=" + orderId;
+        }
+
+        function viewDetails(orderId) {
+            window.location.href =
+                "orderdetails.html?id=" + orderId;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const container =
+                document.getElementById("ordersContainer");
+
+            fetch(
+                "https://store-8721e-default-rtdb.firebaseio.com/orders.json"
+            )
+                .then(response => response.json())
+
+                .then(data => {
+
+                    if (!data) {
+                        container.innerHTML =
+                            "<h2>No Orders Found</h2>";
+                        return;
+                    }
+
+                    const orders = [];
+
+                    Object.entries(data).forEach(([key, value]) => {
+
+                        if (value.products) {
+
+                            orders.push({
+                                id: key,
+                                ...value
+                            });
+
+                        } else {
+
+                            Object.values(value).forEach(order => {
+                                orders.push(order);
+                            });
+
+                        }
+
+                    });
+
+                    const customerEmail = localStorage.getItem("customerEmail");
+
+                    console.log("Customer Email:", customerEmail);
+
+                    console.log("Orders:", orders);
+
+
+                    const userOrders =
+                        orders.filter(
+                            order =>
+                                order.customerEmail === customerEmail
+                        );
+                    console.log("User Orders:", userOrders);
+
+                    let html = "";
+
+                    userOrders.forEach(order => {
+
+                        let total = 0;
+
+                        console.log(order);
+                        console.log("Products:", order.products);
+
+                        if (!order.products) {
+                            console.log("Invalid order:", order);
+                            return;
+                        }
+
+                        order.products.forEach(item => {
+                            total += item.price * item.quantity;
+                        });
+
+                        html += `
+<div class="bg-white border border-gray-200 rounded-2xl p-8 mb-6">
+
+
+        <div class="mt-6 flex gap-6 items-center">
+
+    <!-- Product Images -->
+    <div class="grid grid-cols-2 gap-2 w-44 h-44 flex-shrink-0">
+
+        ${order.products.slice(0,4).map(item => `
+            <div class="overflow-hidden rounded-lg border">
+                <img
+                    src="${item.image}"
+                    class="w-full h-full object-cover"
+                    alt="${item.name}">
+            </div>
+        `).join("")}
+
+    </div>
+
+    <!-- Product Details -->
+    <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold">
+            ${order.products.map(p => p.name).join(" + ")}
+        </h3>
+
+        <p class="text-gray-600 mt-1">
+            Total: ₹${total.toLocaleString()}
+            •
+            ${order.products.length} Items
+        </p>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col gap-3 ml-auto">
+
+        <button
+            onclick="trackOrder('${order.orderId}')"
+            class="bg-green-700 text-white px-8 py-3 rounded-lg font-medium">
+
+            Track Order
+
+        </button>
+
+        <button
+            onclick="viewDetails('${order.orderId}')"
+            class="border border-green-700 text-green-700 px-8 py-3 rounded-lg">
+
+            View Details
+
+        </button>
+
+    </div>
+
+</div>
+        
+
+    </div>
+
+    
+</div>
+
+        
+
+    </div>
+
+</div>
+`;
+                    });
+
+                    container.innerHTML = html;
+
+                })
+
+
+        });
+
+    </script>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        if (searchInput && searchResults) {
+
+            const items = searchResults.querySelectorAll("a");
+
+            searchInput.addEventListener("input", function () {
+
+                const value = this.value.toLowerCase();
+
+                let found = false;
+
+                items.forEach(item => {
+
+                    if (item.textContent.toLowerCase().includes(value)) {
+                        item.style.display = "block";
+                        found = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+
+                });
+
+                searchResults.style.display =
+                    found && value !== "" ? "block" : "none";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
