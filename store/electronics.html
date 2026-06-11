@@ -19,40 +19,34 @@
 </head>
 <body class="bg-background text-on-surface antialiased">
 <!-- TopNavBar Navigation Shell -->
-<header class="navbar">
-
-        <div class="logo">
-            Shree Prakash General
-        </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a class="active">Electronics</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="sports.html">Sports</a>
-            <a href="offers_page.html">Offers</a>
-        </nav>
-
-        <div class="nav-right">
-
-            <div class="search">
-
-                <input type="text" id="searchInput" placeholder="Search products...">
-
-                <div id="searchResults">
-                    <a href="#">Smartphones</a>
-                    <a href="#">Headphones</a>
-                    <a href="#">Sneakers</a>
-                    <a href="#">Backpacks</a>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-regular fa-user"></i>
-            </div>
-
-        </div>
-
-    </header>
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Shree Prakash Genral</h1>
+<nav class="hidden lg:flex items-center gap-6 ml-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-title-md text-title-md" href="#">Electronics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">Beauty</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">Sports</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">Offers</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden md:block w-64 lg:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container border border-outline-variant rounded-full focus:outline-none focus:border-primary text-body-sm" placeholder="Search premium tech..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">favorite</span></button>
+<button class="hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-tertiary-container text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</div>
+</header>
 <main class="max-w-container-max mx-auto px-margin-desktop pb-24">
 <!-- Hero Banner Section -->
 <section class="mt-8 mb-12 rounded-xl overflow-hidden relative group">
@@ -284,70 +278,55 @@
 </div>
 </main>
 <!-- Footer Navigation Shell -->
- <footer>
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h2 class="font-title-md text-title-md text-primary mb-6">Shree Prakash Genral</h2>
+<p class="font-body-sm text-body-sm text-on-secondary-container mb-6 max-w-xs">Your trusted destination for premium electronics and professional lifestyle goods. Delivering excellence since 2024.</p>
+<div class="flex gap-4">
+<a class="text-on-secondary-container hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-secondary-container hover:text-primary" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+<a class="text-on-secondary-container hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Shopping</h3>
+<ul class="space-y-4">
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Return Policy</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Track Order</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Company</h3>
+<ul class="space-y-4">
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">About Us</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Careers</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Terms of Use</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Customer Care</h3>
+<ul class="space-y-4">
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Live Chat</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Email Support</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Warranties</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 max-w-container-max mx-auto border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-sm text-body-sm text-on-secondary-container">© 2024 Shree Prakash Genral. All Rights Reserved.</span>
+<div class="flex gap-6">
+<img alt="Visa" class="h-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmWBK5kvrmcXs2EUIVkJcFEnWIAfc3D7pBLEv9H_3CqYa-ObkuCw9bKeMd-dWHOG5GH1eDwFhFA8vo-mvk1b46KxRjg1RLvQVszjX4ziD_W5Sy6P_iF0xCLR1iIWkXsEGoijxOnuIAf6TmyTVXbzIwHOtj7K6ioJhQ1_YAyk_0589r6N9liT3TvOjO98jtf0uSwjGt17xL10pNWI2A6Ea3jdM9tdtVf_x26AjWywRGzzff-mN97-r4ZgUYH_ss2TpA1tZXSpyMKek">
+<img alt="Mastercard" class="h-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAlCs4reRIwynx5g16RLQsTARqn8Jme0rbRA8PtGY1HxSX42iW156x5UcWDV45XP11wwvChJpgvIoREMpRzrHPMVcOz7TAOXiUkFmh_CRGAtQD-BqXJW-FHsmydUeAHHrcBTxjcBKhyaytRAACrQECD_bzaHS06axVVbfSuJaNImDSE-x7RHKoZEGrW1buIYVhiOA359LqQeS8MjKN4h-gqCaCgUSh2PlVN4T2NLgURkHT09mghtSunlEXHBu1LNLZTGIvm0yIBks">
+<img alt="Paypal" class="h-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7bqwMYk7Vl32JYrGY-mGYQn_vNYK1QJXklvDuP8A1UHQYkI03vtZxveV6sVGct0HVtcLcXiqAwE_Ad9Y92h9PkCXNuF8NYCOF6vbMrAxSvDl2UDvIKwMBf0bq3SPUzh3ik0iYPOPgtOIppMAzbcUiPOfR243wYN4gGB0gnir646xLm7jiA6iTBMR9_OPolZ2_w78zi95Xx7039WIGuqooEXS8YSwU9l-Ty6UdbExnv1qz5S7pmJxyTGV-MCesaOD9pRI1qN5hCiA">
+</div>
+</div>
+</footer>
 
-        <div class="footer-grid">
-
-            <div>
-                <h4>Shree Prakash General</h4>
-                <p>
-                    Quality products at the best prices.
-                </p>
-            </div>
-
-            <div>
-                <h4>Help</h4>
-                <a href="payment.html">Payments</a>
-                <a href="shipping.html">Shipping</a>
-                <a href="faq.html">FAQ</a>
-            </div>
-
-            <div>
-                <h4>Policies</h4>
-                <a href="return-policy.html">Return Policy</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms.html">Terms</a>
-            </div>
-
-            <div>
-                <h4>Contact</h4>
-                <p>8237943592</p>
-                <p>shreeprakashgeneral@gmail.com</p>
-            </div>
-
-        </div>
-
-    </footer>
-<script>
-        const searchInput = document.getElementById("searchInput");
-        const searchResults = document.getElementById("searchResults");
-
-        if (searchInput && searchResults) {
-
-            const items = searchResults.querySelectorAll("a");
-
-            searchInput.addEventListener("input", function () {
-
-                const value = this.value.toLowerCase();
-
-                let found = false;
-
-                items.forEach(item => {
-
-                    if (item.textContent.toLowerCase().includes(value)) {
-                        item.style.display = "block";
-                        found = true;
-                    } else {
-                        item.style.display = "none";
-                    }
-
-                });
-
-                searchResults.style.display =
-                    found && value !== "" ? "block" : "none";
-            });
-        }
-    </script>
 
 
 </body></html>

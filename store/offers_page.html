@@ -9,8 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script type="module" src="offer.js"></script>
-<script src="script.js"></script>
-<link href="style.css" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -29,41 +27,27 @@
 </head>
 <body class="bg-background text-on-surface font-body-lg text-body-lg">
 <!-- TopNavBar -->
-<header class="navbar">
-
-        <div class="logo">
-            Shree Prakash General
-        </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="electronics.html">Electronics</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="sports.html">Sports</a>
-            <a class="active">Offers</a>
-        </nav>
-
-        <div class="nav-right">
-
-            <div class="search">
-
-                <input type="text" id="searchInput" placeholder="Search products...">
-
-                <div id="searchResults">
-                    <a href="#">Smartphones</a>
-                    <a href="#">Headphones</a>
-                    <a href="#">Sneakers</a>
-                    <a href="#">Backpacks</a>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-regular fa-user"></i>
-            </div>
-
-        </div>
-
-    </header>
-<main>
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-surface dark:bg-on-surface max-w-container-max mx-auto border-b border-surface-variant dark:border-outline-variant">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">Shree Prakash Genral</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Collections</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Offers</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">New Arrivals</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Best Sellers</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md font-label-md w-48" placeholder="Search for deals..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity">favorite</button>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity">shopping_cart</button>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity">account_circle</button>
+</div>
+</div>
+</header>
+<main class="pt-[80px]">
 <!-- Hero Section -->
 <section class="relative w-full h-[500px] overflow-hidden">
 <img alt="Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg8aRgFHwXMdnUXG3it2c7lLsp2Djhd15XB0NoSkaSiIN84D71n6RyY1VqQXCpOFAxaFvdhcYNPU4tWT54N43lxRCvvYUyI29GiSokQ392RQaxVY_IO4xW4PfJ84YBHpGfRhZrWhirG5zU-8HQ7tyvFn4RrlZfl2kIAv7iCSibgOxKNXvQuauB4S6YnuZqagal8RqLtICQ20xhnDYNDf_ULRv26VGBEGUpUbWqc73PZ8SpEDSvooEm4zRwnBhC0yaTDQ4djILxb_A"/>
@@ -332,40 +316,47 @@
 </div>
 </main>
 <!-- Footer -->
-<footer>
-
-        <div class="footer-grid">
-
-            <div>
-                <h4>Shree Prakash General</h4>
-                <p>
-                    Quality products at the best prices.
-                </p>
-            </div>
-
-            <div>
-                <h4>Help</h4>
-                <a href="payment.html">Payments</a>
-                <a href="shipping.html">Shipping</a>
-                <a href="faq.html">FAQ</a>
-            </div>
-
-            <div>
-                <h4>Policies</h4>
-                <a href="return-policy.html">Return Policy</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms.html">Terms</a>
-            </div>
-
-            <div>
-                <h4>Contact</h4>
-                <p>8237943592</p>
-                <p>shreeprakashgeneral@gmail.com</p>
-            </div>
-
-        </div>
-
-    </footer>
+<footer class="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-low dark:bg-inverse-surface mt-20">
+<div class="max-w-xs space-y-4">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">Shree Prakash Genral</div>
+<p class="text-on-secondary-container dark:text-secondary-fixed-dim font-body-sm text-body-sm">Your trusted destination for quality essentials and lifestyle upgrades. We deliver reliability and excellence right to your doorstep.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<h5 class="text-primary dark:text-primary-fixed-dim font-bold font-label-md text-label-md uppercase">Shop</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">All Collections</a></li>
+<li><a class="text-primary dark:text-primary-fixed-dim font-bold font-label-sm text-label-sm hover:underline transition-all" href="#">Special Offers</a></li>
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">Best Sellers</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-primary dark:text-primary-fixed-dim font-bold font-label-md text-label-md uppercase">Support</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">About Us</a></li>
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">Contact Support</a></li>
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">Shipping Policy</a></li>
+<li><a class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm hover:underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1 space-y-4">
+<h5 class="text-primary dark:text-primary-fixed-dim font-bold font-label-md text-label-md uppercase">Newsletter</h5>
+<p class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm">Get exclusive access to private sales and events.</p>
+<div class="flex border border-outline rounded-lg overflow-hidden">
+<input class="bg-transparent border-none focus:ring-0 text-sm px-4 py-2 w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 text-sm font-bold">JOIN</button>
+</div>
+</div>
+</div>
+<div class="w-full pt-8 mt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-on-secondary-container dark:text-secondary-fixed-dim font-label-sm text-label-sm">© 2024 Shree Prakash Genral. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer">payments</span>
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer">verified_user</span>
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer">public</span>
+</div>
+</div>
+</footer>
 <script>
         // Countdown Timer Logic
         function updateCountdown() {
@@ -400,35 +391,5 @@
         }
 
         document.addEventListener('DOMContentLoaded', updateCountdown);
-    </script>
-    <script>
-        const searchInput = document.getElementById("searchInput");
-        const searchResults = document.getElementById("searchResults");
-
-        if (searchInput && searchResults) {
-
-            const items = searchResults.querySelectorAll("a");
-
-            searchInput.addEventListener("input", function () {
-
-                const value = this.value.toLowerCase();
-
-                let found = false;
-
-                items.forEach(item => {
-
-                    if (item.textContent.toLowerCase().includes(value)) {
-                        item.style.display = "block";
-                        found = true;
-                    } else {
-                        item.style.display = "none";
-                    }
-
-                });
-
-                searchResults.style.display =
-                    found && value !== "" ? "block" : "none";
-            });
-        }
     </script>
 </body></html>
