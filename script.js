@@ -18,7 +18,7 @@ function initMobileMenu() {
 
     header.insertBefore(btn, header.firstChild);
 
-    const nav = header.querySelector('nav');
+    const nav = header.querySelector('.primary-nav');
 
     btn.addEventListener('click', () => {
         const isOpen = header.classList.toggle('nav-open');

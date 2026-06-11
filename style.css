@@ -741,10 +741,10 @@ color:#666;
 @media (max-width:768px){
     .mobile-menu-toggle{ display:flex !important; z-index:10010; position:absolute; top:18px; right:20px; }
 
-    nav{ display:none; position:absolute; top:100%; left:0; right:0; background:white; padding:16px; box-shadow:0 16px 32px rgba(0,0,0,0.08); border-radius:0 0 16px 16px; }
-    header.nav-open nav{ display:flex !important; flex-direction:column !important; gap:10px; width:100%; z-index:9999; }
+    header.navbar .primary-nav{ display:none; position:absolute; top:100%; left:0; right:0; background:white; padding:16px; box-shadow:0 16px 32px rgba(0,0,0,0.08); border-radius:0 0 16px 16px; }
+    header.nav-open .primary-nav{ display:flex !important; flex-direction:column !important; gap:10px; width:100%; z-index:9999; }
 
-    header.nav-open nav a{ display:block; padding:14px 16px; background:white; border-radius:10px; color:#173c2c; }
+    header.nav-open .primary-nav a{ display:block; padding:14px 16px; background:white; border-radius:10px; color:#173c2c; }
 
     header.nav-open .mobile-menu-toggle .bar:nth-child(1){ transform:translateY(6px) rotate(45deg); }
     header.nav-open .mobile-menu-toggle .bar:nth-child(2){ opacity:0; }
