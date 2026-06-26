@@ -103,7 +103,7 @@
 </div>
 </div>
 <!-- Bento-Style Product Grid -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 <!-- Product 1: Hero Card -->
 <div class="product-card col-span-2 row-span-2 bg-white border border-outline-variant p-6 flex flex-col group">
 <div class="relative flex-grow overflow-hidden mb-6 bg-surface-container-low">
@@ -195,16 +195,8 @@
 </section>
 <!-- Newsletter / Trust Section -->
 <section class="bg-primary text-white py-20">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 items-center gap-16">
-<div>
-<h2 class="font-headline-lg text-headline-xl mb-6">Expertise in Every Drop</h2>
-<p class="font-body-lg text-body-lg text-white/80 mb-8">Join the inner circle of Shree Prakash Genral and receive curated beauty insights, early access to premium launches, and personalized skincare regimens from our lead specialists.</p>
-<div class="flex gap-2">
-<input class="bg-white/10 border border-white/20 rounded px-6 py-4 flex-grow text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors" placeholder="Enter your email" type="email"/>
-<button class="bg-white text-primary px-8 py-4 font-label-md text-label-md rounded hover:bg-surface-dim transition-colors">Subscribe</button>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-4 gap-4">
 <div class="flex flex-col gap-2">
 <span class="material-symbols-outlined text-[40px] text-primary-fixed">verified</span>
 <h4 class="font-title-md text-title-md">Clinically Proven</h4>
@@ -310,6 +302,36 @@
                 console.error(error);
                 alert(error.message);
             }
+        }
+    </script>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        if (searchInput && searchResults) {
+
+            const items = searchResults.querySelectorAll("a");
+
+            searchInput.addEventListener("input", function () {
+
+                const value = this.value.toLowerCase();
+
+                let found = false;
+
+                items.forEach(item => {
+
+                    if (item.textContent.toLowerCase().includes(value)) {
+                        item.style.display = "block";
+                        found = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+
+                });
+
+                searchResults.style.display =
+                    found && value !== "" ? "block" : "none";
+            });
         }
     </script>
 </body></html>
